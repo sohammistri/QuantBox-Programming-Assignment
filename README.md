@@ -1,5 +1,7 @@
 # QuantBox Programming Assignment
 
+The problem statement can be accessed in [statement.pdf](./statement.pdf).
+
 The following is the description of files in this project:
 
 * ```Packets.h``` contains the ```Packet``` class for an individual Packet and ```Message``` class for individual messages. Different types of messages are addressed by extending the base ```Message``` class into various derived classes based on the type of messages like ```NewMessage, TradeMessage, CancelMessage, ModifyMessage, QueryMessage```.
@@ -11,6 +13,28 @@ The following is the description of files in this project:
 * ```CreateOrderBook.cpp``` is a collection of functions devoted to creation of the Order Book by decoding an individual packet. This involves adding new orders to the book, modifying them, removing them in case of trade and cancel orders, and returning appropriate results when queried about them. This is done by the ```createOrderBook``` function.
 
 * ```main.cpp``` is simply the file with the ```main()``` function in it which calls the required functions sequentially and store the query results in a file.
+
+# Access data
+
+Sample data is provided in the zip file ```qbdata.zip```. Upon unzipping, the following folder structure is seen.
+
+```
+tmp
+|
+|
+- - thdata
+    |
+    |
+    - - data0.dat
+    - - data1.dat
+    .
+    .
+    .
+    - - data9.dat
+    - - itchresponsereader
+```
+
+```.dat``` files contain the Packet data and ```itchresponsereader``` is the reader provided to verify the format of the response binary file.
 
 # How to run
 To run the code, please use ```run.sh``` file.
